@@ -4,9 +4,11 @@
     box-sizing: border-box;
     font-family: 'Inder',sans-serif;
 }
-
 body{
     background: #F3F3F3;
+}
+section{
+    height: 100%;
 }
 
 .grid-container {
@@ -14,10 +16,10 @@ body{
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     padding: 0% 3%;
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
 }
 .item{
-    background-color: rgba(255, 255, 255, 0.8);
+    /* background-color: rgba(255, 255, 255, 0.8); */
     padding: 20px 0px;
 }
 .item1{
@@ -110,6 +112,12 @@ body{
     align-items: center;
 }
 
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tittle{
     margin-top: 53%;
 }
@@ -122,28 +130,93 @@ body{
     font-size: 1rem;
 }
 
-.btn{
+/* .btn{
     padding: 10px 20px;
     margin: 20px 0px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
+} */
+
+.btn {
+    padding: 10px 20px;
+    margin: 20px 0px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.btn-shop{
+.btn-shop {
     background-color: #3F3C3C;
     color: white;
     border: none;
     width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 
-.btn-shop:hover{
-    background-color: #5F5C5C;
+.btn-shop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #E4E4E4;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.btn-shop:hover::before {
+    left: 0;
+    z-index: -1;
+}
+
+.btn-shop:hover {
+    color: #3F3C3C;
 }
 
 .img img{
-    width: 74%;
+    width: 70%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+}
+
+.home{
+    scroll-snap-type: y mandatory;
+}
+
+.new-arrivals.tittle{
+    font-size: 1.728rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.product-home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    background-color: #E4E4E4;
+}
+
+.product-home{
+    cursor: pointer;
 }
