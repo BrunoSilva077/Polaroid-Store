@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function HeroSection() {
     return (
         <div className="grid-container home">
@@ -6,7 +7,7 @@ export default function HeroSection() {
                 <div className="flex-col tittle">
                     <h1>The Original is back</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ex quidem tempora adipisci molestias debitis.</p>
-                    <button className="btn btn-shop">Shop</button>
+                    <Link to="/shop" className="btn btn-shop link">Shop</Link> 
                 </div>
             </div>
             <div className="item item5 img">

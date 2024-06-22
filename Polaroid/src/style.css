@@ -98,7 +98,7 @@ section{
 }
 
 .options a{
-    margin: 15px 25px;
+    margin: 15px 40px;
     font-size: 1.2rem;
     cursor: pointer;
     user-select: none;
@@ -320,4 +320,16 @@ footer{
     margin: 1% 0%;
     text-decoration: none;
     font-size: bold;
+}
+
+/* shop page */
+
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link{
+    text-decoration: none;
+    text-align: center;
 }
