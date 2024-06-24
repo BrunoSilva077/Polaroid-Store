@@ -10,6 +10,7 @@ import {
 import Home from  './pages/Home/Home'
 import ErrorPage from './pages/error/Error'
 import Shop from './pages/Shop/Shop';
+import ProfileProduct from './pages/Shop/ProfileProduct';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/shop",
     element: <Shop />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/shop/:id",
+    element: <ProfileProduct />,
     errorElement: <ErrorPage />
   }
 

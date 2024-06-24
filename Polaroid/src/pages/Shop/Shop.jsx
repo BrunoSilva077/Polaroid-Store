@@ -1,6 +1,7 @@
 import NavBar from "../../includes/NavBar"
 import Footer from "../../includes/Footer"
 import ProductCard from "../Home/Components/ProductCard"
+import { Link } from "react-router-dom"
 
 const items = [
   {
@@ -62,19 +63,22 @@ export default function Shop() {
           <p>{items.length} products</p>
         </div>
         <div className="item item10"></div>
-          {/* <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard /> */}
-          {items.map((item) => (
+        {items.map((item) => (
+          // <Link to={{
+          //   pathname: `/shop/${item.id}`,
+          //   state: { product: item }
+          // }} key={item.id} className="item item3 link" style={{color: "black"}}>
+          //   <ProductCard key={item.id} item={item} />
+          // </Link>
+          
+          <Link to={`/shop/${item.id}`} state={{ product: item }} key={item.id} className="item item3 link" style={{ color: "black" }}>
             <ProductCard key={item.id} item={item} />
-          ))}
-          <br />
-          <br />
+          </Link>
+
+          //<ProductCard key={item.id} item={item} />
+        ))}
+        <br />
+        <br />
       </div>
       <Footer />
     </>
