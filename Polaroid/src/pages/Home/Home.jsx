@@ -6,6 +6,8 @@ import ProductCard from "./Components/ProductCard";
 import HeroSection from "./Components/HeroSection";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { ButtonBack, ButtonNext, Carousel, Slide, Slider, SliderBarLine } from "react-scroll-snap-anime-slider";
+
 
 export default function Home() {
   const about = useRef(null);
@@ -29,12 +31,30 @@ export default function Home() {
         <div className="new-arrivals tittle">
           <h3>New Arrivals</h3>
         </div>
-        <div className="grid-container horizontal-scroll">
-          {products.map((item) => {
+        <div className="">
+          {/* {products.map((item) => {
             return <Link to={`/shop/${item.id}`} state={{ product: item }} key={item.id} className="item item3 link" style={{ color: "black" }}>
             <ProductCard key={item.id} item={item} />
           </Link>
-          })}
+          })} */}
+          <Carousel
+          visibleSlides={3}
+          totalSlides={products.length}
+          step={3}
+          >
+            <Slider>
+              {products.map((item) => {
+                return <Slide key={item.id}>
+                  <Link to={`/shop/${item.id}`} state={{ product: item }} className="item item3 link" style={{ color: "black" }}>
+                    <ProductCard item={item} />
+                  </Link>
+                </Slide>
+              })}
+            </Slider>
+            <ButtonBack />
+            <ButtonNext />
+            <SliderBarLine />
+          </Carousel>
         </div>
       </section>
       <section ref={about}>
