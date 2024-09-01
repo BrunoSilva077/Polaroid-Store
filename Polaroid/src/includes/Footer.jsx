@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
     return (
@@ -10,7 +10,6 @@ export default function Footer() {
                     <div className="logo">
                         <h3>Polaroid</h3>
                         <h3>Store</h3>
-                        <FontAwesomeIcon icon={faInstagram} className='footer-icons'/>
                         <FontAwesomeIcon icon={faLinkedin} className='footer-icons' />
                         <FontAwesomeIcon icon={faGithub} className='footer-icons' />
                         <h4>Made by: Bruno Silva</h4>

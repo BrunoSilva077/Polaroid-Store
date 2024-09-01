@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 export default function About({ path, alt, side }) {
-    console.log(path, alt)
+    // console.log(path, alt)
     return (
         <>
             {side === "left" ? (

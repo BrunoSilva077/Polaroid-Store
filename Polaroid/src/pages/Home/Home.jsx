@@ -4,38 +4,21 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import ProductCard from "./Components/ProductCard";
 import HeroSection from "./Components/HeroSection";
-import { useRef } from "react";
-
-const items = [
-  {
-    id: 1,
-    product: "Polaroid Camera 1",
-    price: "$100",
-    image: "./Polaroid-removebg.png",
-  },
-  {
-    id: 2,
-    product: "Polaroid Camera 2",
-    price: "$100",
-    image: "./Polaroid-removebg.png",
-  },
-  {
-    id: 3,
-    product: "Polaroid Camera 3",
-    price: "$100",
-    image: "./Polaroid-removebg.png",
-  },
-  {
-    id: 4,
-    product: "Polaroid Camera 4",
-    price: "$100",
-    image: "./Polaroid-removebg.png",
-  }
-]
+import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const about = useRef(null);
   const contact = useRef(null);
+  const [products,setProducts] = useState([]);
+
+  useEffect(() =>{
+    const storedProducts = JSON.parse(localStorage.getItem('products'));
+    if (storedProducts) {
+      setProducts(storedProducts);
+    }
+  },[])
+  
   return (
     <>
       <NavBar aboutRef={about} contactRef={contact} />
@@ -47,12 +30,10 @@ export default function Home() {
           <h3>New Arrivals</h3>
         </div>
         <div className="grid-container horizontal-scroll">
-          {/* <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard /> */}
-          {items.map((item) => {
-            return <ProductCard key={item.id} item={item} />
+          {products.map((item) => {
+            return <Link to={`/shop/${item.id}`} state={{ product: item }} key={item.id} className="item item3 link" style={{ color: "black" }}>
+            <ProductCard key={item.id} item={item} />
+          </Link>
           })}
         </div>
       </section>

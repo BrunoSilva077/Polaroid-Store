@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+// import { useEffect } from "react";
 // import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function NavBar({ aboutRef, contactRef }) {
@@ -9,13 +10,12 @@ export default function NavBar({ aboutRef, contactRef }) {
   // console.log(about,"about ref" + aboutRef);
   // console.log("contact state -" +contact);
 
-
   const scrollSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
-      behavior: "smooth"
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="grid-container">
@@ -26,8 +26,10 @@ export default function NavBar({ aboutRef, contactRef }) {
       </div>
       <div className="item item6"></div>
       <div className="item item4 options">
-        <a>Admin</a>
-        <Link to="/shop">Shop</Link> 
+        <Link to="/admin">Admin</Link>
+        <Link to="/shop">
+          Shop
+        </Link>
         {/* <Link to={{
           pathname: "/shop",
           state: {
@@ -36,30 +38,18 @@ export default function NavBar({ aboutRef, contactRef }) {
         }}>Shop</Link> */}
         {aboutRef && contactRef != undefined ? (
           <>
-            <a onClick={() => scrollSection(aboutRef)} >About</a>
-            <a onClick={() => scrollSection(contactRef)} >Contact</a>
+            <a onClick={() => scrollSection(aboutRef)}>About</a>
+            <a onClick={() => scrollSection(contactRef)}>Contact</a>
           </>
         ) : (
           <>
-            <Link to="/">About</Link>
-            <Link to="/">Contact</Link>
+            <Link to="/" >About</Link>
+            <Link to="/" >Contact</Link>
           </>
         )}
       </div>
-      {/* <div className="item item1 options">
-        <a>Admin</a>
-        </div>
-        <div className="item item1 options">
-        <Link to="/shop">Shop</Link>
-        </div>
-        <div className="item item1 options">
-        <a onClick={() => scrollSection(aboutRef)} >About</a>
-        </div>
-        <div className="item item1 options">
-        <a onClick={() => scrollSection(contactRef)} >Contact</a>
-        </div> */}
     </div>
-  )
+  );
 }
 
 NavBar.propTypes = {

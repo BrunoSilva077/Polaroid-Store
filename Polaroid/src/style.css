@@ -242,6 +242,23 @@ section{
     margin-bottom: 100px;
 }
 
+.form-admin input, .form-admin textarea, .form-admin select{
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    width: 100%;
+    margin: 5px 0px;
+    height: 50px;
+    padding: 15px 15px 15px 15px;
+    background-color: #E4E4E4;
+}
+
+.form-admin input::placeholder, .form-admin textarea::placeholder{
+    color: #3F3C3C;
+    font-size: 15px;
+}
+
 .form-contact input, .form-contact textarea{
     padding: 15px 100px 15px 15px;
     margin: 5px 0px;
@@ -332,4 +349,26 @@ footer{
 .link{
     text-decoration: none;
     text-align: center;
+}
+
+.productProfile{
+    align-items: normal;
+    margin-top: 28%;
+}
+
+.productProfile p{
+    font-size: 20px;
+    padding: 20px 0px 20px 0px;
+}
+
+/* Admin Page */
+
+.adminTittle{
+    margin: 20px 0px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.adminForms form{
+    width: 100%;
 }

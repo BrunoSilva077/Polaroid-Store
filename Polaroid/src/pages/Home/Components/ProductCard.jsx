@@ -6,7 +6,7 @@ export default function ProductCard({item}) {
         <div className="product-image">
           <img src={`${item.image}`} alt="polaroid" />
         </div>
-        <h3>{item.product}</h3>
+        <h3>{item.name}</h3>
         <p>{item.price}</p>
       </div>
     </div>
