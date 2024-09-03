@@ -52,7 +52,7 @@ Make sure you have Node.js installed on your machine.
      
 ### Usage
 
-Once the application is running, open your browser and navigate to [http://localhost:5173](http://localhost:5173) to view the Tic Tac Toe app.
+Once the application is running, open your browser and navigate to [http://localhost:5173](http://localhost:5173) to view the Polaroid store app.
 
 ### Folder Structure
 
