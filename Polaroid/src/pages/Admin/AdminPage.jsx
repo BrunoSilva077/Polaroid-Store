@@ -115,7 +115,6 @@ export default function AdminPage() {
                   type="number"
                   placeholder="Price"
                   maxLength={20}
-                  defaultValue={0}
                   value={newProduct.price}
                   onChange={(e) =>
                     setNewProduct({ ...newProduct, price: e.target.value })

@@ -1,14 +1,6 @@
 import PropTypes from "prop-types";
-// import { useEffect } from "react";
-// import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function NavBar({ aboutRef, contactRef }) {
-  // const [about, setAbout] = useState();
-  // const [contact, setContact] = useState();
-  // if(aboutRef != undefined) setAbout(aboutRef);
-  // if(contactRef != undefined) setContact(contactRef);
-  // console.log(about,"about ref" + aboutRef);
-  // console.log("contact state -" +contact);
 
   const scrollSection = (elementRef) => {
     window.scrollTo({
@@ -30,12 +22,6 @@ export default function NavBar({ aboutRef, contactRef }) {
         <Link to="/shop">
           Shop
         </Link>
-        {/* <Link to={{
-          pathname: "/shop",
-          state: {
-            items: items
-          }
-        }}>Shop</Link> */}
         {aboutRef && contactRef != undefined ? (
           <>
             <a onClick={() => scrollSection(aboutRef)}>About</a>
@@ -53,6 +39,6 @@ export default function NavBar({ aboutRef, contactRef }) {
 }
 
 NavBar.propTypes = {
-  aboutRef: PropTypes.object.isRequired,
-  contactRef: PropTypes.object.isRequired,
+  aboutRef: PropTypes.object,
+  contactRef: PropTypes.object
 };

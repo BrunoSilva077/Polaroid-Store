@@ -14,6 +14,6 @@ export default function ProductCard({item}) {
 }
 
 ProductCard.propTypes = {
-  key: PropTypes.number.isRequired,
-  item: PropTypes.object.isRequired,
+  key: PropTypes.number,
+  item: PropTypes.object,
 };

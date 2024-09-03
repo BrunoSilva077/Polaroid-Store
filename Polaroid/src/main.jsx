@@ -41,7 +41,7 @@ const Main = () => {
         id: 1,
         name: "Polaroid Camera 1",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -49,7 +49,7 @@ const Main = () => {
         id: 2,
         name: "Polaroid Camera 2",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg3.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -57,7 +57,7 @@ const Main = () => {
         id: 3,
         name: "Polaroid Camera 3",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg3.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -65,7 +65,7 @@ const Main = () => {
         id: 4,
         name: "Polaroid Camera 4",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -73,7 +73,7 @@ const Main = () => {
         id: 5,
         name: "Polaroid Camera 5",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg3.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -81,7 +81,7 @@ const Main = () => {
         id: 6,
         name: "Polaroid Camera 6",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg3.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -89,7 +89,7 @@ const Main = () => {
         id: 7,
         name: "Polaroid Camera 7",
         price: 100,
-        image: "../../../Polaroid-removebg.png",
+        image: "/Polaroid-removebg.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },
@@ -97,7 +97,7 @@ const Main = () => {
         id: 8,
         name: "Polaroid Camera 8",
         price: 100,
-        image: "public/Polaroid-removebg.png",
+        image: "/Polaroid-removebg3.png",
         description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint earum et.",
       },

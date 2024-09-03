@@ -31,12 +31,7 @@ export default function Home() {
         <div className="new-arrivals tittle">
           <h3>New Arrivals</h3>
         </div>
-        <div className="">
-          {/* {products.map((item) => {
-            return <Link to={`/shop/${item.id}`} state={{ product: item }} key={item.id} className="item item3 link" style={{ color: "black" }}>
-            <ProductCard key={item.id} item={item} />
-          </Link>
-          })} */}
+        <div>
           <Carousel
           visibleSlides={3}
           totalSlides={products.length}
